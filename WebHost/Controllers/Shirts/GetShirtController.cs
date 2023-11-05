@@ -3,12 +3,12 @@
 namespace WebHost.Controllers.Shirts;
 
 [ApiController]
-[Route("api/get-shirts")]
+[Route("api/get-shirt/{id}")]
 public class GetShirtController: Controller
 {
     [HttpGet]
-    public string GetShirts()
+    public string GetShirts(int id)
     {
-        return $"Retrieve shirts";
+        return $"Retrieve shirt with id: {id}";
     }
 }

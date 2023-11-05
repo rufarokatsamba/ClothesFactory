@@ -3,12 +3,12 @@
 namespace WebHost.Controllers.Shirts;
 
 [ApiController]
-[Route("api/get-shirts")]
+[Route("api/delete-shirt/{id}")]
 public class DeleteShirtController: Controller
 {
-    [HttpGet]
-    public string GetShirts()
+    [HttpDelete]
+    public string DeleteShirt(int id)
     {
-        return $"Retrieve shirts";
+        return $"Removed shirt with id: {id}";
     }
 }

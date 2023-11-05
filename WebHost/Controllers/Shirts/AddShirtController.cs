@@ -1,6 +1,14 @@
-﻿namespace WebHost.Controllers.Shirts;
+﻿using Microsoft.AspNetCore.Mvc;
 
-public class AddShirtController
+namespace WebHost.Controllers.Shirts;
+
+[ApiController]
+[Route("api/add-shirt")]
+public class AddShirtController: Controller
 {
-    
+    [HttpPost]
+    public string AddShirt()
+    {
+        return $"Added shirt";
+    }
 }
